@@ -3,7 +3,7 @@ function GetCategoryData() {
 
     fetch(categoryAPIURL)
     .then(CategoryResponse => {
-        return CategoryResponse.json
+        return CategoryResponse.json();
     })
 
     .then(data => {
