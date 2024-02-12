@@ -1,4 +1,4 @@
-function GetCategoryData() {
+function GetCategoryData(callback) {
     const categoryAPIURL = 'https://dummyjson.com/products/categories'
 
     fetch(categoryAPIURL)
@@ -11,4 +11,8 @@ function GetCategoryData() {
     })
 }
 
-GetCategoryData();
+function ReceiveCategoryData(data) {
+    console.log('Processing data:', data);
+}
+
+GetCategoryData(ReceiveCategoryData);
