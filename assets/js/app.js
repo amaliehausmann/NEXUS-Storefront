@@ -20,7 +20,7 @@ function GetProductData(callback) {
     fetch(productAPIURL)
     .then(productResponse => {
         return productResponse.json();
-    })
+    })  
 
     .then(data => {
         console.log('fetched product data:', data);
